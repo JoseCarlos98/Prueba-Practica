@@ -11,12 +11,9 @@ export class FormularioComponent implements OnInit, OnDestroy {
   onDestroy = new Subject<void>();
   @Output() result = new EventEmitter();
 
-  valueForm = this.fb.group({
-    value: new FormControl({value: '', disabled: false}, Validators.required),
+  valorForm = this.fb.group({
+    valor: new FormControl({value: '', disabled: false}, Validators.required),
   });
-
-  nesimoPrimo = 0;
-  nesimoMultiplo  = 0;
 
   constructor(
     private fb: FormBuilder
@@ -24,8 +21,8 @@ export class FormularioComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {}
 
-  performRequestCompany(){
-    if (this.valueForm.get('value')!.value) this.result.emit(this.valueForm.get('value')!.value);
+  realizarSolicitud(){
+    if (this.valorForm.get('valor')!.value) this.result.emit(this.valorForm.get('valor')!.value);
   }
 
   ngOnDestroy(): void {

@@ -1,13 +1,12 @@
 <div class="container">
-    <form [formGroup]="valueForm" (ngSubmit)="performRequestCompany()">
+    <form [formGroup]="valorForm" (ngSubmit)="realizarSolicitud()">
         <div class="row">
             <div class="col-lg-10 d-flex align-items-center mt-5">
                 <div class="c-inputs">
                     <label for="input">Ingrese valor</label>
-                    <input class="input-global m-0" type="number" placeholder="Valor" name="input"
-                        formControlName="value">
+                    <input class="input-global m-0" type="number" placeholder="Valor" name="input" formControlName="valor">
                 </div>
-                <button  class="btn-format-global p-10 ms-2" type="submit">Calcular</button>
+                <button class="btn-format-global p-10 ms-2" type="submit">Calcular</button>
             </div>
         </div>
     </form>

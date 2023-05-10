@@ -17,7 +17,7 @@ export class PruebaPracticaComponent implements OnInit, OnDestroy {
   ngOnInit(): void { }
 
   obtenerResultados(valor:any) {
-    this.numerosPrimos = this.obtenerNumerosPrimos(valor)
+    this.numerosPrimos = this.obtenerNumerosPrimos(valor);
     this.resultado = {
       primos: this.obtenerNumerosPrimos(valor),
       multiplosDeTres: this.obtenerMultiplosDeTres(valor)
@@ -25,24 +25,24 @@ export class PruebaPracticaComponent implements OnInit, OnDestroy {
   }
 
   obtenerNumerosPrimos(cantidadPrimos: number) {
-    let actualPosition = 3;
+    let actualPosicion = 3;
     const numerosPrimos: any  = {
       primos: [2],
-      nEsimo: null,
+      nEsimo: null
     };
 
     while (numerosPrimos.primos.length < cantidadPrimos + 1) {
       let esPrimo = true;
 
       for (let i = 0; i < numerosPrimos.primos.length; i++) {
-        if (actualPosition % numerosPrimos.primos[i] === 0) {
+        if (actualPosicion % numerosPrimos.primos[i] === 0) {
           esPrimo = false;
           break;
         }
       }
 
-      if (esPrimo) numerosPrimos.primos.push(actualPosition);
-      actualPosition += 2;
+      if (esPrimo) numerosPrimos.primos.push(actualPosicion);
+      actualPosicion += 2;
     }
 
     numerosPrimos.nEsimo = numerosPrimos.primos[numerosPrimos.primos.length - 1];
@@ -54,7 +54,7 @@ export class PruebaPracticaComponent implements OnInit, OnDestroy {
     let multiplo = 3;
     const numerosMultiplos: any  = {
       multiplos: [],
-      nEsimo: null,
+      nEsimo: null
     };
 
     while (numerosMultiplos.multiplos.length < cantidadMultiplos) {
