@@ -25,7 +25,7 @@ export class FormularioComponent implements OnInit, OnDestroy {
   ngOnInit(): void {}
 
   performRequestCompany(){
-    this.result.emit(this.valueForm.get('value')!.value)
+    if (this.valueForm.get('value')!.value) this.result.emit(this.valueForm.get('value')!.value);
   }
 
   ngOnDestroy(): void {
