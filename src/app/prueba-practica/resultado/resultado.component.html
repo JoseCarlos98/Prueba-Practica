@@ -1,0 +1,19 @@
+<div class="c-result animate__animated animate__fadeIn">
+    <div>
+        <div class="me-3">
+            <h2 class="h2-formato">Secuencia Primos</h2>
+            <h3 class="h3-formato">{{ obtenerResultados?.primos?.primos.join(' - ') || '-' }}</h3>
+
+            <h2 class="h2-formato mt-3">N-ésimo</h2>
+            <h3 class="h3-formato">{{ obtenerResultados?.primos?.nEsimo || '-' }}</h3>
+        </div>
+
+        <div>
+            <h2 class="h2-formato">Secuencia Multiplos</h2>
+            <h3 class="h3-formato">{{ obtenerResultados?.multiplosDeTres?.multiplos.join(' - ') || '-' }}</h3>
+
+            <h2 class="h2-formato mt-3">N-ésimo</h2>
+            <h3 class="h3-formato">{{ obtenerResultados?.multiplosDeTres?.nEsimo || '-' }}</h3>
+        </div>
+    </div>
+</div>

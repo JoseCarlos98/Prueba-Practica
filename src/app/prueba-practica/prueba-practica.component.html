@@ -1,0 +1,17 @@
+
+<div class="c-main-container">
+    <div class="card-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="h1-formato">Calcular primos, múltiplos y n-ésimo número</h1>
+                    <app-formulario (result)="obtenerResultados($event)"></app-formulario>
+                </div>
+                <div class="col-md-6" >
+                    <h1 class="h1-formato">Resultado</h1>
+                    <app-resultado *ngIf="resultado" [obtenerResultados]="resultado"></app-resultado>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
